@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -13,8 +14,17 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+      // dd(Auth::guard());
+      // if(Auth::guard('admin')) {
+      //   $this->middleware('auth:admin');
+      // }
+      // elseif(Auth::guard('web')) {
         $this->middleware('auth');
-    }
+      // }
+
+      }
+
+
 
     /**
      * Show the application dashboard.

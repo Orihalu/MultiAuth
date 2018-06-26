@@ -8,13 +8,16 @@
                 <div class="panel-heading">AdminDashboard</div>
 
                 <div class="panel-body">
-                    @if (session('status'))
+                    <!-- @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
                         </div>
-                    @endif
+                    @endif -->
 
-                    You are logged in as Admin!
+                    @component ('components.who')
+                    @endcomponent
+
+
                 </div>
             </div>
         </div>
